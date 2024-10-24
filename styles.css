@@ -1,0 +1,93 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the html and body elements */
+html, body {
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensures body takes full viewport height */
+}
+
+/* Styles for the bunny element */
+.bunny {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(156, 94, 62);
+    border-radius: 100%; /* Circular shape */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    animation: saltos 1s ease-in-out infinite; /* Calls the keyframes animation */
+}
+
+/* Styles for the face element */
+#face {
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for the eyes */
+.leftEye, .rightEye {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 100%; /* Circular shape */
+    margin: 5px;
+}
+
+/* Styles for the nose */
+.nose {
+    width: 6px;
+    height: 6px;
+    background-color: rgb(255, 208, 208);
+    border-radius: 100%; /* Circular shape */
+    opacity: 80%;
+    margin: 0;
+    top: -30px;
+    position: relative;
+}
+
+/* Container for the eyes */
+.eyes {
+    display: flex;
+    top: -30px;
+    position: relative;
+}
+
+/* Container for the ears */
+.ears {
+    display: flex;
+    align-items: column;
+    gap: 5px;
+    position: relative;
+}
+
+/* Styles for each ear */
+#leftEar, #rightEar {
+    width: 25px;
+    height: 50px;
+    background-color: rgb(156, 94, 62);
+    border-radius: 20px;
+    position: relative;
+    top: -30px;
+}
+
+/* Keyframes for the bunny animation */
+@keyframes saltos {
+    /* position x, position y */
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateY(80%);
+    }
+}
